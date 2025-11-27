@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(../assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(255, 255, 255, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(../assets/moon-stars.svg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(../assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(../assets/sun.svg);
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+    min-height: 100vh;
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 360px;
+    max-width: 588px;
+    margin: 56px auto 0px auto;
+    padding: 0 24px;
+    padding-bottom: 24px;
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    padding: 24px;
+}
+
+.profile img {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.professional-summary-dropdown {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.summary-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.summary-toggle:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+.summary-toggle span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.summary-content {
+    margin-top: 8px;
+    padding: 16px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    animation: slideDown 0.3s ease-out;
+}
+
+.summary-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 0;
+    font-weight: 400;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+        transform: translateY(0);
+    }
+}
+
+.email-link:hover {
+    opacity: 1 !important;
+    text-decoration: underline;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+    cursor: pointer;
+}
+
+.switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    animation: slide-back .2s;
+    cursor: pointer;
+}
+
+.light .switch button {
+    animation: slide-in .2s forwards;
+}
+
+.switch button:hover {
+    outline: 8px solid var(--highlight-color);
+}
+
+.switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/* Links */
+.links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+.links-list li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.links-list li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+    gap: 8px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background .2s;
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    background: var(--highlight-color);
+}
+
+/* Sections */
+.section {
+    margin: 32px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--stroke-color);
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.portfolio-item {
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+}
+
+.portfolio-item:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+.portfolio-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.portfolio-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.portfolio-item .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tech-tag {
+    background: var(--highlight-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.portfolio-item a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.portfolio-item a:hover {
+    opacity: 0.8;
+}
+
+/* Resume */
+.resume-section {
+    margin-bottom: 24px;
+}
+
+.resume-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--stroke-color);
+}
+
+.experience-item,
+.education-item {
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.experience-item h4,
+.education-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.experience-item .company,
+.education-item .institution {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.experience-item .period,
+.education-item .period {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.experience-item .description {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.skill-item {
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+}
+
+.skill-item:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+.skill-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 32px;
+}
+
+footer a {
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(../assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(../assets/bg-desktop-light.jpg);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 588px;
+    }
+}
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+}
+
