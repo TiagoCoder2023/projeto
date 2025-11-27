@@ -1,7 +1,8 @@
 // Configuração de dados do perfil
+const baseUrl = import.meta.env.BASE_URL || '/projeto/';
 export const profileData = {
-    avatar: `${import.meta.env.BASE_URL}assets/avatar2.png`,
-    avatarLight: `${import.meta.env.BASE_URL}assets/avatar-light2.png`,
+    avatar: `${baseUrl}assets/avatar2.png`,
+    avatarLight: `${baseUrl}assets/avatar-light2.png`,
     username: '@tiago.oliv_',
     name: 'Tiago de Oliveira Barreto',
     email: 'ti4gooliv.2112@gmail.com'
