@@ -43,7 +43,7 @@ export const links = [
     {
         id: 6,
         title: 'Email',
-        url: 'https://mail.google.com/mail/?view=cm&fs=1&to=titiago2504@gmail.com',
+        url: 'https://mail.google.com/mail/?view=cm&fs=1&to=ti4gooliv.2112@gmail.com',
         icon: 'mail-outline'
     }
 ];
