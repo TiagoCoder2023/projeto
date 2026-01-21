@@ -65,6 +65,14 @@ export const portfolioProjects = [
         technologies: ['n8n', 'OpenAI GPT-4', 'PostgreSQL', 'Redis', 'Evolution API', 'WhatsApp', 'Whisper', 'GPT-4 Vision'],
         liveUrl: null,
         githubUrl: 'https://github.com/TiagoCoder2023/My-AI-Agents---n8n'
+    },
+    {
+        id: 3,
+        title: 'Análise de Crédito - Previsão de Score com Machine Learning',
+        description: 'Sistema completo de machine learning para previsão de score de crédito com interface web em Streamlit. Oferece duas formas de previsão: formulário para entrada individual e upload de arquivos (CSV/Excel) para previsões em lote. O modelo utiliza algoritmos de aprendizado de máquina para analisar dados financeiros e calcular scores de crédito, auxiliando em decisões de aprovação de empréstimos e análise de risco.',
+        technologies: ['Python', 'Machine Learning', 'Streamlit', 'Scikit-learn', 'Pandas', 'NumPy', 'Jupyter', 'Joblib'],
+        liveUrl: 'https://udlamddmkegvuqb3mhyrht.streamlit.app/',
+        githubUrl: 'https://github.com/TiagoCoder2023/analise_credito'
     }
 ];
 
