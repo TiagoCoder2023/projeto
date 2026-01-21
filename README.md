@@ -1,4 +1,4 @@
-<h1 align="center"> DevLinks - Portfólio & Currículo </h1>
+<h1 align="center">  Portfólio & Currículo </h1>
 
 <p align="center">
 Link tree moderno desenvolvido em React com seções de portfólio e currículo. <br/>
