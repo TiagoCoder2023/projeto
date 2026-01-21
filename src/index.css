@@ -26,7 +26,14 @@
 
 body {
     background: var(--bg-url) no-repeat top center/cover;
+    background-attachment: fixed;
     min-height: 100vh;
+}
+
+html {
+    min-height: 100%;
+    background: var(--bg-url) no-repeat top center/cover;
+    background-attachment: fixed;
 }
 
 body * {

@@ -73,6 +73,14 @@ export const portfolioProjects = [
         technologies: ['Python', 'Machine Learning', 'Streamlit', 'Scikit-learn', 'Pandas', 'NumPy', 'Jupyter', 'Joblib'],
         liveUrl: 'https://udlamddmkegvuqb3mhyrht.streamlit.app/',
         githubUrl: 'https://github.com/TiagoCoder2023/analise_credito'
+    },
+    {
+        id: 4,
+        title: 'Workflows - N8N',
+        description: 'Coleção completa de automações desenvolvidas com n8n, incluindo workflows para diferentes setores e necessidades empresariais. O portfólio contém exemplos de automações de atendimento, integrações de sistemas, processamento de dados e fluxos de trabalho inteligentes.',
+        technologies: ['n8n', 'Automações', 'Workflows', 'Integrações', 'APIs', 'Webhooks'],
+        liveUrl: 'https://drive.google.com/drive/folders/1bm4cagaki1UFAP6a04GjAL9E9ykMgy1u?usp=sharing',
+        githubUrl: null
     }
 ];
 
