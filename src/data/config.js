@@ -5,7 +5,7 @@ export const profileData = {
     avatarLight: `${baseUrl}assets/avatar-light2.png`,
     username: '@tiago.oliv_',
     name: 'Tiago de Oliveira Barreto',
-    email: 'titiago2504@gmail.com'
+    email: 'ti4gooliv.2112@gmail.com'
 };
 
 // Links principais
