@@ -100,6 +100,7 @@ export const education = [
 export const skills = [
     'n8n',
     'Agentes de IA',
+    'Python',
     'PostgreSQL',
     'APIs REST',
     'Webhooks',
